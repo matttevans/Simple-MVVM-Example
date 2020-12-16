@@ -1,0 +1,14 @@
+﻿<Window x:Class="MVVM_Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM_Example"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="341.406" Width="582.031" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="{Binding ButtonContent}" Command="{Binding ShowTextCommand}" HorizontalAlignment="Left" Margin="244,198,0,0" VerticalAlignment="Top" Width="74" Height="20"/>
+        <Label Content="{Binding LabelContent}" HorizontalAlignment="Center" Margin="49,78,30,0" VerticalAlignment="Top" Width="497"/>
+
+    </Grid>
+</Window>
