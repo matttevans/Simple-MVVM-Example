@@ -2,7 +2,7 @@
 
 namespace MVVM_Example.ViewModel {
 
-	public class MainWindowViewModel : ViewModelBase, INotifyPropertyChanged {
+	public class MainWindowViewModel : INotifyPropertyChanged {
 
 		public DelegateCommand<object> ShowTextCommand { get; }
 
@@ -10,7 +10,13 @@ namespace MVVM_Example.ViewModel {
 		public string ButtonContent {
 
 			get => m_ButtonContent;
-			set => SetProperty(ref m_ButtonContent, value);
+			set {
+
+				if (m_ButtonContent != value) {
+					m_ButtonContent = value;
+					OnPropertyChanged(nameof(ButtonContent));
+				}
+			}
 		}
 
 		private string m_LabelContent;
